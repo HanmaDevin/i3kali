@@ -155,7 +155,9 @@ install_discord() {
   printf ">>> Do you want to install Discord (y/n)?\n"
   read -r discord
   if [[ "$discord" =~ [yY] ]]; then
-    flatpak install discord
+    wget -O discord.deb "https://discord.com/api/download?platform=linux&format=deb"
+    sudo apt install ./discord.deb
+    rm ./discord.deb
   fi
 }
 
