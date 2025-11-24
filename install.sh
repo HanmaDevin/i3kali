@@ -11,7 +11,7 @@ repo="$HOME/i3kali"
 cfgPath="$repo/.config"
 
 install_packages() {
-  local packages=("python-pip" "libreoffice" "rust-all" "polybar" "rofi" "autotiling" "rust-analyzer" "nodejs" "npm" "zsh" "unrar" "qbittorrent" "golang" "tree" "ntfs-3g" "ufw" "gamemode" "bat" "openjdk-21-jdk" "docker" "ripgrep" "fd" "wine" "openssh" "pam-u2f" "libfido2" "texlive-full" "nala" "jq" "btop" "bzip2")
+  local packages=("python-pip" "libreoffice" "rust-all" "polybar" "rofi" "autotiling" "rust-analyzer" "nodejs" "npm" "zsh" "unrar" "qbittorrent" "golang" "tree" "ntfs-3g" "ufw" "gamemode" "bat" "openjdk-21-jdk" "docker" "ripgrep" "fd" "wine" "openssh" "thunar" "tumbler" "pam-u2f" "libfido2" "texlive-full" "nala" "jq" "btop" "bzip2")
   for pkg in "${packages[@]}"; do
     sudo apt install -y "$pkg"
   done
