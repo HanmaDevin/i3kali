@@ -1,0 +1,14 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Fonts
+ *
+ **/
+
+* {
+  font: "Font Awesome 7 Free Regular 12";
+  font: "Font Awesome 7 Free Brands 12";
+  font: "GeistMono Nerd Font 12";
+}

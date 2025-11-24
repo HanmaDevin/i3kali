@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+#  _       __      ____                           
+# | |     / /___ _/ / /___  ____ _____  ___  _____
+# | | /| / / __ `/ / / __ \/ __ `/ __ \/ _ \/ ___/
+# | |/ |/ / /_/ / / / /_/ / /_/ / /_/ /  __/ /    
+# |__/|__/\__,_/_/_/ .___/\__,_/ .___/\___/_/     
+#                 /_/         /_/                 
+
+WALLPAPER_DIR="$HOME/Pictures/Wallpaper/"
+
+# make sure file exists
+if [[ ! -f ~/.current_wallpaper ]]; then
+  touch ~/.current_wallpaper
+fi
+
+# Slideshow behavior
+while true; do
+  CURRENT_WALL=~/.current_wallpaper
+
+  # Get a random wallpaper that is not the current one
+  WALLPAPER=$(find "$WALLPAPER_DIR" -type f ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
+ 
+  # Apply the selected wallpaper
+  feh --bg-fill "$WALLPAPER"
+  # For powermenu to have the same Background
+  cp $WALLPAPER ~/.current_wallpaper
+  sleep 600
+done
